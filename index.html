@@ -1,0 +1,36 @@
+<!doctype html>
+ <html>
+  <head> 
+  <script> 
+  function sub() {
+   var open,high,low;
+   open = parseInt(document.getElementById("first").value);
+ high = parseInt(document.getElementById("second").value); 
+ low = parseInt(document.getElementById("third").value);
+ sell = high - open;
+ buy = open - low;
+ 
+ 
+  if(open == high){
+  document.write("<h3>Sell</h3>");
+}else if(open == low){
+  document.write("<h3> Buy</h3>")  
+}
+else if(buy < sell){
+  document.write("<h2> Buy</h2>");
+}else if(sell < buy){
+    document.write("<h3>Sell</h3>")
+}else{
+   document.write("<h3> Neutral</h3>");
+} 
+   } </script> 
+  </head> 
+  <body> 
+  
+  <p>OPEN:<input id="first"></p>
+   <p>HIGH:<input id="second"></p>
+   <p>LOW:<input id ="third"></p>
+    <a onclick="sub()">Buy/Sell</a> 
+    
+  </body> 
+</html>
